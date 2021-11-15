@@ -15,7 +15,6 @@ function Jobs(): ReactElement {
       'https://api.lever.co/v0/postings/musicworldmedia?mode=json&group=team',
     ),
   );
-  console.log('🚀 ~ Jobs ~ data', sections);
 
   return (
     <div className="jobs-wrapper">
@@ -24,6 +23,12 @@ function Jobs(): ReactElement {
         {isError && <p>Error fetching jobs</p>}
         {sections && <p>Jobs</p>}
       </header>
+      <div className="sections-wrapper">
+        {sections &&
+          sections.map((section, index) => (
+            <Section key={index} section={section} />
+          ))}
+      </div>
     </div>
   );
 }

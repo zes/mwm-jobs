@@ -1,4 +1,4 @@
-$font: Ubuntu, sans-serif;
+@use '/src/style/main';
 
 .jobs-wrapper {
   background-image: linear-gradient(to right, #ff7854 34%, #ff0067 109%);
@@ -6,11 +6,18 @@ $font: Ubuntu, sans-serif;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  padding: 0 40px;
 }
 
 .jobs-header {
-  font-family: $font;
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
+  @include main.font(
+    $color: white,
+    $size: 40px,
+    $weight: 900,
+    $transform: none
+  );
+}
+
+.sections-wrapper {
+  width: 100%;
 }

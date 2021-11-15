@@ -1,0 +1,16 @@
+@use '/src/style/main';
+
+.section-title {
+  @include main.font(
+    $color: white,
+    $size: 18px,
+    $weight: 500,
+    $transform: uppercase
+  );
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: white;
+}
