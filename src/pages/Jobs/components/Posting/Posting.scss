@@ -1,0 +1,48 @@
+@use '/src/style/main';
+
+.posting-card {
+  border-radius: 5px;
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.posting-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.posting-title {
+  margin-bottom: 10px;
+  @include main.font(
+    $color: black,
+    $size: 22px,
+    $weight: 300,
+    $transform: none
+  );
+}
+
+.posting-subtitle {
+  @include main.font(
+    $color: gray,
+    $size: 12px,
+    $weight: 500,
+    $transform: uppercase
+  );
+}
+
+.apply-button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 20px;
+  @include main.gradient;
+  @include main.font(
+    $color: white,
+    $size: 14px,
+    $weight: 500,
+    $transform: none
+  );
+}

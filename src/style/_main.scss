@@ -1,9 +1,18 @@
-$font: Ubuntu, sans-serif;
-
 @mixin font($color, $size, $weight, $transform) {
-  font-family: $font;
+  font-family: Ubuntu, sans-serif;
   font-weight: $weight;
   font-size: $size;
   text-transform: $transform;
   color: $color;
+}
+
+@mixin gradient {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(34%, #ff7854),
+    color-stop(109%, #ff0067)
+  );
+  background-image: linear-gradient(to right, #ff7854 34%, #ff0067 109%);
 }
