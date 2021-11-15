@@ -9,6 +9,7 @@ function Posting({
   posting: {
     text,
     categories: { location, department },
+    applyUrl,
   },
 }: PostingProps): ReactElement {
   return (
@@ -17,7 +18,14 @@ function Posting({
         <span className="posting-title">{text}</span>
         <span className="posting-subtitle">{`${location} - ${department}`}</span>
       </div>
-      <button className="apply-button">APPLY</button>
+      <a
+        className="apply-button"
+        href={applyUrl}
+        target="_blank"
+        rel="noreferrer"
+      >
+        APPLY
+      </a>
     </div>
   );
 }

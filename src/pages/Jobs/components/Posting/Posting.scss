@@ -38,6 +38,7 @@
   border: none;
   border-radius: 5px;
   padding: 5px 20px;
+  text-decoration: none;
   @include main.gradient;
   @include main.font(
     $color: white,
