@@ -10,19 +10,28 @@ function Posting({
     text,
     categories: { location, department },
     applyUrl,
+    hostedUrl,
   },
 }: PostingProps): ReactElement {
   return (
     <div className="posting-card">
-      <div className="posting-info">
-        <span className="posting-title">{text}</span>
-        <span className="posting-subtitle">{`${location} - ${department}`}</span>
+      <div className="info">
+        <span className="title">{text}</span>
+        <span className="subtitle">{`${location} - ${department}`}</span>
       </div>
       <a
-        className="apply-button"
+        href={hostedUrl}
+        target="_blank"
+        rel="noreferrer"
+        className="card-link"
+      >
+        hidden card link
+      </a>
+      <a
         href={applyUrl}
         target="_blank"
         rel="noreferrer"
+        className="apply-button"
       >
         APPLY
       </a>
